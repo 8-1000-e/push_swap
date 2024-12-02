@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_arg.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edubois- <edubois-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: edubois- <edubois-@student.42angouleme>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 16:35:38 by edubois-          #+#    #+#             */
-/*   Updated: 2024/11/30 20:19:40 by edubois-         ###   ########.fr       */
+/*   Updated: 2024/12/02 15:52:25 by edubois-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,23 @@ void	check_for_sign(char **av, int ac)
 
 void	check_for_dups(t_list *lst)
 {
-	(void)lst;
+	t_list	*save_lst;
+	t_list	*keep_lst;
+
+	save_lst = lst;
+	keep_lst = lst;
+	while (save_lst)
+	{
+		lst = lst->next;	
+		while (lst && lst->content != save_lst->content)
+		{
+			lst = lst->next;
+		}
+		if (lst)
+			clean_exit(keep_lst);
+		save_lst = save_lst->next;
+		lst = save_lst;
+	}
 }
 
 void    check_args(int ac, char **av)
