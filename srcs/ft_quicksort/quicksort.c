@@ -1,45 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   quicksort.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edubois- <edubois-@student.42angouleme>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/29 22:12:15 by edubois-          #+#    #+#             */
-/*   Updated: 2024/12/02 19:07:41 by edubois-         ###   ########.fr       */
+/*   Created: 2024/12/02 18:46:43 by edubois-          #+#    #+#             */
+/*   Updated: 2024/12/02 19:43:32 by edubois-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
-void	print_lst(t_list *a)
+void	ft_quicksort(t_data data)
 {
-	while (a)
-	{
-		ft_printf(1, "%d\n", a->content);
-		a = a->next;
-	}
-}
+	// t_list *save_lst = data.stack_a;
 
-int main(int ac, char **av)
-{
-	t_list *a;
-	t_list *a_new;
-	int c_ac;
-
-	a = NULL;
-	av++;
-	c_ac = ac;
-	check_args(ac, av);
-	while (--c_ac)
+	while (1)
 	{
-		a_new = get_stack(*av);
-		if (!a_new)
-			clean_exit(a, 1);
-		a = list_join(a, a_new);
-		av++;
+	if (data.stack_a->content > ft_lstlast(data.stack_a)->content)
+		ra(&data);
+	if (data.stack_a->content > data.stack_a->next->content)
+		sa(&data);
+	check_sort(data.stack_a);
 	}
-	check_for_dups(a);
-	// print_lst(a);
-	start_sort(a);
 }
