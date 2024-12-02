@@ -6,7 +6,11 @@
 #    By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/29 18:55:09 by edubois-          #+#    #+#              #
+<<<<<<< HEAD
 #    Updated: 2024/12/02 19:16:28 by npalissi         ###   ########.fr        #
+=======
+#    Updated: 2024/12/02 18:47:40 by edubois-         ###   ########.fr        #
+>>>>>>> refs/remotes/origin/main
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +43,11 @@ SRCS =  srcs/main.c\
 		srcs/function_a/ft_function_b.c\
 		srcs/function_a/ft_function_ba.c\
 		srcs/function_a/ft_function_shared.c\
+<<<<<<< HEAD
 		srcs/algo/ft_turkish.c
+=======
+		srcs/ft_quicksort/quicksort.c
+>>>>>>> refs/remotes/origin/main
 
 OBJS = $(SRCS:.c=.o)
 

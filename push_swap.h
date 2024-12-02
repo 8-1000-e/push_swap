@@ -6,7 +6,11 @@
 /*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 19:01:51 by edubois-          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2024/12/02 19:24:16 by npalissi         ###   ########.fr       */
+=======
+/*   Updated: 2024/12/02 19:06:48 by edubois-         ###   ########.fr       */
+>>>>>>> refs/remotes/origin/main
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +50,15 @@ int pba(t_list **stack_1, t_list **stack_2);
 void ss(t_data *data);
 void rr(t_data *data);
 void rrr(t_data *data);
+<<<<<<< HEAD
 
 void ft_turkish_sort(t_data *data);
 void	print_lst(t_list *a);
 
+=======
+void	ft_quicksort(t_data data);
+void    check_sort(t_list *lst);
+void	print_lst(t_list *a); //a supp
+>>>>>>> refs/remotes/origin/main
 
 #endif 

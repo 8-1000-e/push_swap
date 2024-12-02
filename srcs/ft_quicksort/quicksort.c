@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   clean_exit.c                                       :+:      :+:    :+:   */
+/*   quicksort.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edubois- <edubois-@student.42angouleme>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/29 20:58:32 by edubois-          #+#    #+#             */
-/*   Updated: 2024/12/02 19:42:05 by edubois-         ###   ########.fr       */
+/*   Created: 2024/12/02 18:46:43 by edubois-          #+#    #+#             */
+/*   Updated: 2024/12/02 19:43:32 by edubois-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
-void    ft_clearlst(t_list *a)
+void	ft_quicksort(t_data data)
 {
-    t_list *save;
+	// t_list *save_lst = data.stack_a;
 
-    while (a)
-    {
-        save = a->next;
-        free(a);
-        a = save;
-    }
-}
-
-void    clean_exit(t_list *a, int error)
-{
-    if (a)
-        ft_clearlst(a);
-    if (error)
-        ft_printf(2, "Error \n");
-    exit(0);
+	while (1)
+	{
+	if (data.stack_a->content > ft_lstlast(data.stack_a)->content)
+		ra(&data);
+	if (data.stack_a->content > data.stack_a->next->content)
+		sa(&data);
+	check_sort(data.stack_a);
+	}
 }

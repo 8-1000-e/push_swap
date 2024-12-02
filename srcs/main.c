@@ -6,7 +6,11 @@
 /*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 22:12:15 by edubois-          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2024/12/02 19:23:52 by npalissi         ###   ########.fr       */
+=======
+/*   Updated: 2024/12/02 19:07:41 by edubois-         ###   ########.fr       */
+>>>>>>> refs/remotes/origin/main
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +44,10 @@ int main(int ac, char **av)
 		av++;
 	}
 	check_for_dups(a);
+<<<<<<< HEAD
 
+=======
+	// print_lst(a);
+>>>>>>> refs/remotes/origin/main
 	start_sort(a);
 }
