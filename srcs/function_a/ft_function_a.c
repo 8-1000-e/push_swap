@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_function_a.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
+/*   By: edubois- <edubois-@student.42angouleme>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 02:40:19 by npalissi          #+#    #+#             */
-/*   Updated: 2024/12/02 16:13:04 by npalissi         ###   ########.fr       */
+/*   Updated: 2024/12/02 16:50:38 by edubois-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
 int sa(t_data *data)
 {

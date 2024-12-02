@@ -6,7 +6,7 @@
 /*   By: edubois- <edubois-@student.42angouleme>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 15:54:45 by edubois-          #+#    #+#             */
-/*   Updated: 2024/12/02 16:07:46 by edubois-         ###   ########.fr       */
+/*   Updated: 2024/12/02 16:32:35 by edubois-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,11 @@ void    check_sort(t_list *lst)
 
 void    start_sort(t_list *lst)
 {
-    check_sort(lst);
-	
+    t_data data;
     
+    data.stack_a = lst;
+    data.stack_b = 0;
+    check_sort(lst);
+    (void)data;
     ft_clearlst(lst);
 }

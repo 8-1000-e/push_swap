@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_function_ba.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
+/*   By: edubois- <edubois-@student.42angouleme>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 18:37:13 by npalissi          #+#    #+#             */
-/*   Updated: 2024/11/13 19:13:46 by npalissi         ###   ########.fr       */
+/*   Updated: 2024/12/02 16:52:34 by edubois-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
 int rba(t_list **pile)
 {
@@ -73,5 +73,5 @@ int pba(t_list **pile_1, t_list **pile_2)
 	if (!pile_1)
 		return (0);
 	ft_lstadd_front(pile_2,tmp);
-	
+	return (1);
 }
