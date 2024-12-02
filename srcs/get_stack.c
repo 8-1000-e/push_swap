@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_stack.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edubois- <edubois-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: edubois- <edubois-@student.42angouleme>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 22:12:24 by edubois-          #+#    #+#             */
-/*   Updated: 2024/11/30 20:38:51 by edubois-         ###   ########.fr       */
+/*   Updated: 2024/12/02 15:37:29 by edubois-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,8 @@
 
 t_list	*list_join(t_list *lst, t_list *lst2)
 {
-	t_list	*clone_lst2;
-	
 	if (!lst)
 		return (lst2);
-	clone_lst2 = lst2;
 	while (lst2)
 	{
 		ft_lstadd_back(&lst, lst2);
@@ -69,6 +66,8 @@ t_list *get_stack(char *str)
 			clean_exit(s);
 		ft_lstadd_back(&s, ft_lstnew(nb));
 		str += ft_lennb(str);
+		while (*str && (ft_iswhitespace(*str) || delete_zero(str)))
+			str++;
 	}
 	if (!s)
 		return (NULL);
