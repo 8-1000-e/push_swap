@@ -6,7 +6,7 @@
 /*   By: edubois- <edubois-@student.42angouleme>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 18:46:43 by edubois-          #+#    #+#             */
-/*   Updated: 2024/12/02 19:43:32 by edubois-         ###   ########.fr       */
+/*   Updated: 2024/12/02 21:29:57 by edubois-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_quicksort(t_data data)
 {
-	// t_list *save_lst = data.stack_a;
-
 	while (1)
 	{
 	if (data.stack_a->content > ft_lstlast(data.stack_a)->content)
