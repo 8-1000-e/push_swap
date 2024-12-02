@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: edubois- <edubois-@student.42angouleme>    +#+  +:+       +#+         #
+#    By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/29 18:55:09 by edubois-          #+#    #+#              #
-#    Updated: 2024/12/02 16:34:07 by edubois-         ###   ########.fr        #
+#    Updated: 2024/12/02 19:16:28 by npalissi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,8 @@ SRCS =  srcs/main.c\
 		srcs/function_a/ft_function_a.c\
 		srcs/function_a/ft_function_b.c\
 		srcs/function_a/ft_function_ba.c\
-		srcs/function_a/ft_function_shared.c
+		srcs/function_a/ft_function_shared.c\
+		srcs/algo/ft_turkish.c
 
 OBJS = $(SRCS:.c=.o)
 

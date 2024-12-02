@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edubois- <edubois-@student.42angouleme>    +#+  +:+       +#+        */
+/*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 22:12:15 by edubois-          #+#    #+#             */
-/*   Updated: 2024/12/02 16:05:28 by edubois-         ###   ########.fr       */
+/*   Updated: 2024/12/02 19:23:52 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,6 @@ int main(int ac, char **av)
 		av++;
 	}
 	check_for_dups(a);
-	print_lst(a);
+
 	start_sort(a);
 }
