@@ -6,7 +6,7 @@
 /*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 18:45:20 by npalissi          #+#    #+#             */
-/*   Updated: 2024/12/02 19:58:55 by npalissi         ###   ########.fr       */
+/*   Updated: 2024/12/02 21:09:27 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,17 +92,41 @@ void ft_turkish_sort(t_data *data)
 
 	t_list *tmp;
 	int i;
+	int best;
+
+	best = 0;
 	pb(data);
 	pb(data);
 	tmp = data->stack_a;
 	ft_draw_pile(*data);
-	while(tmp)
+	while( ft_lstsize(data->stack_a) > 3)
 	{
-		i = ft_get_pos(data->stack_a,tmp);
-		ft_printf(1,"%d   ",i);
-		ft_printf(1,"%d   ",ft_get_pos(data->stack_b, ft_get_smaller(tmp->content,data->stack_b)));
-		i = i + ft_get_pos(data->stack_b, ft_get_smaller(tmp->content,data->stack_b)) + 1;
-		ft_printf(1,"content : %d \tcoup: %d \t smaller: %d\n",tmp->content, i, ft_get_smaller(tmp->content,data->stack_b)->content);
-		tmp = tmp->next;
+		tmp = data->stack_a;
+		while(tmp)
+		{
+			i = ft_get_pos(data->stack_a,tmp);
+			i = i + ft_get_pos(data->stack_b, ft_get_smaller(tmp->content,data->stack_b));
+			i += 1;
+			if (i < best || !best)
+				best = i;
+			// ft_printf(1,"content : %d \tcoup: %d \t smaller: %d\n",tmp->content, i, ft_get_smaller(tmp->content,data->stack_b)->content);
+			tmp = tmp->next;
+		}
+		tmp = data->stack_a;
+		while(tmp)
+		{
+			i = ft_get_pos(data->stack_a,tmp);
+			i = i + ft_get_pos(data->stack_b, ft_get_smaller(tmp->content,data->stack_b));
+			i += 1;
+			if (i == best)
+				break;
+			tmp = tmp->next;
+		}
+		while(ft_get_pos(data->stack_a,tmp))
+			ra(data);
+		while(ft_get_pos(data->stack_b, ft_get_smaller(tmp->content,data->stack_b)))
+			rb(data);
+		pb(data);
 	}
+	ft_draw_pile(*data);
 }
