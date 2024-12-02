@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edubois- <edubois-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: edubois- <edubois-@student.42angouleme>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 22:12:15 by edubois-          #+#    #+#             */
-/*   Updated: 2024/11/30 20:05:09 by edubois-         ###   ########.fr       */
+/*   Updated: 2024/12/02 16:05:28 by edubois-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,11 @@ int main(int ac, char **av)
 	{
 		a_new = get_stack(*av);
 		if (!a_new)
-			clean_exit(a);
+			clean_exit(a, 1);
 		a = list_join(a, a_new);
 		av++;
 	}
 	check_for_dups(a);
 	print_lst(a);
-	ft_clearlst(a);
+	start_sort(a);
 }

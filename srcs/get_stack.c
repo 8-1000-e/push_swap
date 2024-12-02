@@ -6,7 +6,7 @@
 /*   By: edubois- <edubois-@student.42angouleme>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 22:12:24 by edubois-          #+#    #+#             */
-/*   Updated: 2024/12/02 15:37:29 by edubois-         ###   ########.fr       */
+/*   Updated: 2024/12/02 16:00:21 by edubois-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ t_list *get_stack(char *str)
 			str++;
 		nb = ft_atoi(str, &overflow);
 		if (overflow)
-			clean_exit(s);
+			clean_exit(s, 1);
 		ft_lstadd_back(&s, ft_lstnew(nb));
 		str += ft_lennb(str);
 		while (*str && (ft_iswhitespace(*str) || delete_zero(str)))

@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   clean_exit.c                                       :+:      :+:    :+:   */
+/*   start_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edubois- <edubois-@student.42angouleme>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/29 20:58:32 by edubois-          #+#    #+#             */
-/*   Updated: 2024/12/02 16:00:03 by edubois-         ###   ########.fr       */
+/*   Created: 2024/12/02 15:54:45 by edubois-          #+#    #+#             */
+/*   Updated: 2024/12/02 16:07:46 by edubois-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    ft_clearlst(t_list *a)
+void    check_sort(t_list *lst)
 {
-    t_list *save;
+    t_list *save_lst;
 
-    while (a)
-    {
-        save = a->next;
-        free(a);
-        a = save;
-    }
+    save_lst = lst;
+    while (lst->next && lst->next->content > lst->content)
+        lst = lst->next;
+    if (!lst->next)
+        clean_exit(save_lst, 0);
 }
 
-void    clean_exit(t_list *a, int error)
+void    start_sort(t_list *lst)
 {
-    if (a)
-        ft_clearlst(a);
-    if (error)
-        ft_printf(2, "Error \n");
-    exit(0);
+    check_sort(lst);
+	
+    
+    ft_clearlst(lst);
 }

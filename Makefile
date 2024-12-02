@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: edubois- <edubois-@student.42.fr>          +#+  +:+       +#+         #
+#    By: edubois- <edubois-@student.42angouleme>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/29 18:55:09 by edubois-          #+#    #+#              #
-#    Updated: 2024/11/30 16:45:32 by edubois-         ###   ########.fr        #
+#    Updated: 2024/12/02 15:55:39 by edubois-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,8 @@ LIBFT_LIB 	:= $(LIBFT_DIR)/libft.a
 SRCS =  srcs/main.c\
 		srcs/get_stack.c \
 		srcs/clean_exit.c\
-		srcs/parse_arg.c
+		srcs/parse_arg.c\
+		srcs/start_sort.c
 
 OBJS = $(SRCS:.c=.o)
 

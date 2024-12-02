@@ -6,7 +6,7 @@
 /*   By: edubois- <edubois-@student.42angouleme>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 16:35:38 by edubois-          #+#    #+#             */
-/*   Updated: 2024/12/02 15:52:25 by edubois-         ###   ########.fr       */
+/*   Updated: 2024/12/02 16:03:13 by edubois-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ void	check_for_letters(char **av, int ac)
 		while (av[j][i] && ft_strchr(" 0123456789-+", av[j][i]))
 			i++;
 		if (av[j][i])
-		    clean_exit(NULL);
+		    clean_exit(NULL, 1);
 	}
 	if (av[++j])
-		clean_exit(NULL);
+		clean_exit(NULL, 1);
 }
 
 void	check_for_sign(char **av, int ac)
@@ -44,12 +44,12 @@ void	check_for_sign(char **av, int ac)
 		while (av[j][i])
 		{
 			if (ft_issign(av[j][i]) && !ft_isdigit(av[j][i + 1]))
-				clean_exit(NULL);
+				clean_exit(NULL, 1);
 			i++;
 		}
 	}
 	if (av[++j])
-		clean_exit(NULL);
+		clean_exit(NULL, 1);
 }
 
 void	check_for_dups(t_list *lst)
@@ -67,7 +67,7 @@ void	check_for_dups(t_list *lst)
 			lst = lst->next;
 		}
 		if (lst)
-			clean_exit(keep_lst);
+			clean_exit(keep_lst, 1);
 		save_lst = save_lst->next;
 		lst = save_lst;
 	}
