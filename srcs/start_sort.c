@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   start_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edubois- <edubois-@student.42angouleme>    +#+  +:+       +#+        */
+/*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 15:54:45 by edubois-          #+#    #+#             */
-/*   Updated: 2024/12/02 21:30:48 by edubois-         ###   ########.fr       */
+/*   Updated: 2024/12/03 02:37:18 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,11 @@ void    start_sort(t_list *lst)
     data.stack_b = 0;
     check_sort(lst);
     if (ft_lstsize(data.stack_a) < 4)
-        ft_quicksort(data);
+    {
+        ft_quicksort(&data);
+        check_sort(lst);
+    }
     ft_turkish_sort(&data);
+    // print_lst(data.stack_a);
     ft_clearlst(lst);
 }

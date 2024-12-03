@@ -6,7 +6,7 @@
 /*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 19:01:51 by edubois-          #+#    #+#             */
-/*   Updated: 2024/12/02 21:14:26 by npalissi         ###   ########.fr       */
+/*   Updated: 2024/12/03 02:04:01 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,16 @@ typedef struct s_data
 	t_list	*stack_b; 
 }				t_data;
 
-typedef struct s_func
+typedef struct s_op
 {
-	char rra;
-	char rrb;
-	char ra;
-	char rb;
-} t_func;
+	int rra;
+	int rrb;
+	int rrr;
+	int ra;
+	int rb;
+	int rr;
+	// int is_init;
+} 	t_op;
 
 
 t_list *get_stack(char *str);
@@ -58,9 +61,11 @@ void rr(t_data *data);
 void rrr(t_data *data);
 
 void ft_turkish_sort(t_data *data);
-void	print_lst(t_list *a);
 
-void	ft_quicksort(t_data data);
+void	print_lst(t_list *a);
+void	ft_draw_pile(t_data data);
+
+void	ft_quicksort(t_data *data);
 void    check_sort(t_list *lst);
 void	print_lst(t_list *a); //a supp
 
