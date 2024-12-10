@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_stack.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edubois- <edubois-@student.42angouleme>    +#+  +:+       +#+        */
+/*   By: npalissi <npalissi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 22:12:24 by edubois-          #+#    #+#             */
-/*   Updated: 2024/12/02 16:00:21 by edubois-         ###   ########.fr       */
+/*   Updated: 2024/12/10 15:03:33 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,3 +75,4 @@ t_list *get_stack(char *str)
 	free(s);
 	return (s_clone);
 }
+

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
+/*   By: npalissi <npalissi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 19:01:51 by edubois-          #+#    #+#             */
-/*   Updated: 2024/12/03 02:04:01 by npalissi         ###   ########.fr       */
+/*   Updated: 2024/12/10 16:50:51 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include "lib/libft/libft.h"
 #include <unistd.h>
 #include <stdlib.h>
+#include <limits.h>
 
 typedef struct s_data
 {
@@ -66,7 +67,24 @@ void	print_lst(t_list *a);
 void	ft_draw_pile(t_data data);
 
 void	ft_quicksort(t_data *data);
+void	ft_quicksort_four(t_data *data);
+void ft_quisort_five(t_data *data);
 void    check_sort(t_list *lst);
 void	print_lst(t_list *a); //a supp
+
+t_op	ft_opti_rotate(t_op all_op);
+t_op	ft_opti_rrotate(t_op all_op);
+t_op	ft_opti_operations(t_op all_op, t_data *data);
+int	ft_get_all_op(t_op *all_op);
+void	ft_start_operation(t_op *all_op, t_data *data, char type_stack);
+
+int	ft_get_pos(t_list *stack, t_list *node);
+t_list	*ft_get_big(t_list *stack);
+t_list	*ft_get_min(t_list *stack);
+t_list	*ft_get_bigger(int content, t_list *stack);
+t_list	*ft_get_smaller(int content, t_list *stack);
+
+int	ft_get_pos(t_list *stack, t_list *node);
+t_list	*ft_get_min(t_list *stack);
 
 #endif 

@@ -29,7 +29,10 @@ SRCS =  srcs/main.c\
 		srcs/function_a/ft_function_ba.c\
 		srcs/function_a/ft_function_shared.c\
 		srcs/algo/ft_turkish.c\
-		srcs/ft_quicksort/quicksort.c
+		srcs/ft_quicksort/quicksort.c\
+		srcs/ft_quicksort/quicksort_five.c\
+		srcs/algo/ft_utils.c\
+		srcs/algo/ft_operator.c
 
 OBJS = $(SRCS:.c=.o)
 
