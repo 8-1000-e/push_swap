@@ -3,22 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_function_ba.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edubois- <edubois-@student.42angouleme>    +#+  +:+       +#+        */
+/*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 18:37:13 by npalissi          #+#    #+#             */
-/*   Updated: 2024/12/02 16:52:34 by edubois-         ###   ########.fr       */
+/*   Updated: 2024/12/10 18:21:12 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-int rba(t_list **pile)
+int	rba(t_list **pile)
 {
-	t_list *tmp;
-	
+	t_list	*tmp;
+
 	if (ft_lstsize(*pile) == 1)
 		return (0);
-
 	tmp = *pile;
 	*pile = tmp->next;
 	tmp->next = 0;
@@ -26,11 +25,10 @@ int rba(t_list **pile)
 	return (1);
 }
 
-
-int sba(t_list **pile)
+int	sba(t_list **pile)
 {
-	t_list *tmp;
-	t_list *first;
+	t_list	*tmp;
+	t_list	*first;
 
 	if (ft_lstsize(*pile) <= 1)
 		return (0);
@@ -45,10 +43,10 @@ int sba(t_list **pile)
 	return (1);
 }
 
-int rrba(t_list **pile)
+int	rrba(t_list **pile)
 {
-	t_list *tmp;
-	t_list *last;
+	t_list	*tmp;
+	t_list	*last;
 
 	if (ft_lstsize(*pile) <= 1)
 		return (0);
@@ -56,22 +54,21 @@ int rrba(t_list **pile)
 	if (!last)
 		return (0);
 	tmp = *pile;
-	while(tmp->next != last)
-		tmp = tmp->next;	
+	while (tmp->next != last)
+		tmp = tmp->next;
 	tmp->next = 0;
-	ft_lstadd_front(pile,last);
+	ft_lstadd_front(pile, last);
 	return (1);
 }
 
-int pba(t_list **pile_1, t_list **pile_2)
+int	pba(t_list **pile_1, t_list **pile_2)
 {
-	t_list *tmp;
-	
-	
+	t_list	*tmp;
+
 	tmp = *pile_1;
 	*pile_1 = (*pile_1)->next;
 	if (!pile_1)
 		return (0);
-	ft_lstadd_front(pile_2,tmp);
+	ft_lstadd_front(pile_2, tmp);
 	return (1);
 }

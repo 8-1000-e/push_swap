@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edubois- <edubois-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 16:32:27 by edubois-          #+#    #+#             */
-/*   Updated: 2024/11/29 23:09:43 by edubois-         ###   ########.fr       */
+/*   Updated: 2024/12/10 18:22:59 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int	ft_strlen(const char *str)
 	return (tmp - str);
 }
 
-int	ft_putstr(int fd ,char *str)
+int	ft_putstr(int fd, char *str)
 {
 	if (!str)
 		return (ft_putstr(fd, "(null)"));

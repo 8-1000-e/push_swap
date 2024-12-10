@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_issign.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edubois- <edubois-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 21:25:16 by edubois-          #+#    #+#             */
-/*   Updated: 2024/11/29 21:25:59 by edubois-         ###   ########.fr       */
+/*   Updated: 2024/12/10 18:25:11 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_issign(int c)
+int	ft_issign(int c)
 {
-    if (!c)
-        return (0);
-    return (c == '-' || c == '+');
+	if (!c)
+		return (0);
+	return (c == '-' || c == '+');
 }

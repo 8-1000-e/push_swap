@@ -3,32 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   clean_exit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edubois- <edubois-@student.42angouleme>    +#+  +:+       +#+        */
+/*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 20:58:32 by edubois-          #+#    #+#             */
-/*   Updated: 2024/12/02 19:42:05 by edubois-         ###   ########.fr       */
+/*   Updated: 2024/12/10 19:58:25 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void    ft_clearlst(t_list *a)
+void	ft_clearlst(t_list *a)
 {
-    t_list *save;
+	t_list	*save;
 
-    while (a)
-    {
-        save = a->next;
-        free(a);
-        a = save;
-    }
+	while (a)
+	{
+		save = a->next;
+		free(a);
+		a = save;
+	}
 }
 
-void    clean_exit(t_list *a, int error)
+void	clean_exit(t_list *a, int error)
 {
-    if (a)
-        ft_clearlst(a);
-    if (error)
-        ft_printf(2, "Error \n");
-    exit(0);
+	if (a)
+		ft_clearlst(a);
+	if (error)
+		ft_printf(2, "Error \n");
+	exit(0);
 }

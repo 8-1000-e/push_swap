@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_function_b.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edubois- <edubois-@student.42angouleme>    +#+  +:+       +#+        */
+/*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 18:33:06 by npalissi          #+#    #+#             */
-/*   Updated: 2024/12/02 16:52:13 by edubois-         ###   ########.fr       */
+/*   Updated: 2024/12/10 18:19:31 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-int sb(t_data *data)
+int	sb(t_data *data)
 {
 	if (!sba(&data->stack_b))
 		return (0);
@@ -20,7 +20,7 @@ int sb(t_data *data)
 	return (1);
 }
 
-int rb(t_data *data)
+int	rb(t_data *data)
 {
 	if (!rba(&data->stack_b))
 		return (0);
@@ -28,7 +28,7 @@ int rb(t_data *data)
 	return (1);
 }
 
-int rrb(t_data *data)
+int	rrb(t_data *data)
 {
 	if (!rrba(&data->stack_b))
 		return (0);
@@ -36,9 +36,9 @@ int rrb(t_data *data)
 	return (1);
 }
 
-int pb(t_data *data)
+int	pb(t_data *data)
 {
 	pba(&data->stack_a, &data->stack_b);
-	write(1, "pb\n",3);
+	write(1, "pb\n", 3);
 	return (1);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edubois- <edubois-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 16:58:32 by edubois-          #+#    #+#             */
-/*   Updated: 2024/11/30 17:57:08 by edubois-         ###   ########.fr       */
+/*   Updated: 2024/12/10 18:25:27 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(int));
 void	ft_lstclear(t_list **lst, void (*del)(int));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(int));
 int		ft_issign(int c);
-int 	ft_iswhitespace(int c);
-
+int		ft_iswhitespace(int c);
 
 #endif 
