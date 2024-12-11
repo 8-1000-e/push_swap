@@ -6,11 +6,11 @@
 /*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 18:37:13 by npalissi          #+#    #+#             */
-/*   Updated: 2024/12/10 18:21:12 by npalissi         ###   ########.fr       */
+/*   Updated: 2024/12/11 12:46:57 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../push_swap.h"
 
 int	rba(t_list **pile)
 {
@@ -65,6 +65,8 @@ int	pba(t_list **pile_1, t_list **pile_2)
 {
 	t_list	*tmp;
 
+	if (!*pile_1)
+		return (0);
 	tmp = *pile_1;
 	*pile_1 = (*pile_1)->next;
 	if (!pile_1)

@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_function_shared.c                               :+:      :+:    :+:   */
+/*   clean_exit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/13 18:17:28 by npalissi          #+#    #+#             */
-/*   Updated: 2024/12/10 18:20:00 by npalissi         ###   ########.fr       */
+/*   Created: 2024/11/29 20:58:32 by edubois-          #+#    #+#             */
+/*   Updated: 2024/12/11 16:32:38 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../push_swap.h"
 
-void	rrr(t_data *data)
+void	ft_clearlst(t_list *a)
 {
-	rrba(&data->stack_b);
-	rrba(&data->stack_a);
-	write(1, "rrr\n", 4);
+	t_list	*save;
+
+	while (a)
+	{
+		save = a->next;
+		free(a);
+		a = save;
+	}
 }
 
-void	rr(t_data *data)
+void	clean_exit_bonus(t_list *a, int error)
 {
-	rba(&data->stack_a);
-	rba(&data->stack_b);
-	write(1, "rr\n", 3);
-}
-
-void	ss(t_data *data)
-{
-	sba(&data->stack_a);
-	sba(&data->stack_b);
-	write(1, "ss\n", 3);
+	if (a)
+		ft_clearlst(a);
+	if (error == 1)
+		ft_printf(2, "KO \n");
+	else if (error == 2)
+		ft_printf(2, "Error\n");
+	else if (!error)
+		ft_printf(1, "OK \n");
+	exit(error > 1);
 }

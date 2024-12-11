@@ -6,7 +6,7 @@
 /*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 15:54:45 by edubois-          #+#    #+#             */
-/*   Updated: 2024/12/10 19:27:53 by npalissi         ###   ########.fr       */
+/*   Updated: 2024/12/11 16:29:44 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,5 @@ void	start_sort(t_list *lst)
 		ft_quisort_five(&data);
 	check_sort(data.stack_a);
 	ft_turkish_sort(&data);
-	ft_clearlst(lst);
+	ft_clearlst(data.stack_a);
 }

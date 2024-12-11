@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_function_shared.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 16:32:27 by edubois-          #+#    #+#             */
-/*   Updated: 2024/12/11 16:35:08 by npalissi         ###   ########.fr       */
+/*   Created: 2024/11/13 18:17:28 by npalissi          #+#    #+#             */
+/*   Updated: 2024/12/11 12:31:02 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../push_swap.h"
 
-static int	ft_strlen(const char *str)
+void	rrr(t_data *data, int send_message)
 {
-	const char	*tmp;
-
-	tmp = str;
-	while (*tmp)
-		tmp++;
-	return (tmp - str);
+	rrba(&data->stack_b);
+	rrba(&data->stack_a);
+	if (send_message)
+		write(1, "rrr\n", 4);
 }
 
-int	ft_putstr(int fd, char *str)
+void	rr(t_data *data, int send_message)
 {
-	if (!str)
-		return (ft_putstr(fd, "(null)"));
-	return (write(1, str, ft_strlen(str)));
+	rba(&data->stack_a);
+	rba(&data->stack_b);
+	if (send_message)
+		write(1, "rr\n", 3);
+}
+
+void	ss(t_data *data, int send_message)
+{
+	sba(&data->stack_a);
+	sba(&data->stack_b);
+	if (send_message)
+		write(1, "ss\n", 3);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_operator.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: npalissi <npalissi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 16:28:44 by npalissi          #+#    #+#             */
-/*   Updated: 2024/12/10 16:55:42 by npalissi         ###   ########.fr       */
+/*   Updated: 2024/12/11 14:06:16 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,20 +83,20 @@ int	ft_get_all_op(t_op *all_op)
 void	ft_start_operation(t_op *all_op, t_data *data, char type_stack)
 {
 	while (all_op->ra--)
-		ra(data);
+		ra(data, 1);
 	while (all_op->rb--)
-		rb(data);
+		rb(data, 1);
 	while (all_op->rr--)
-		rr(data);
+		rr(data, 1);
 	while (all_op->rra--)
-		rra(data);
+		rra(data, 1);
 	while (all_op->rrb--)
-		rrb(data);
+		rrb(data, 1);
 	while (all_op->rrr--)
-		rrr(data);
+		rrr(data, 1);
 	*all_op = (t_op){0, 0, 0, 0, 0, 0};
 	if (type_stack == 'a')
-		pb(data);
+		pb(data, 1);
 	else
-		pa(data);
+		pa(data, 1);
 }

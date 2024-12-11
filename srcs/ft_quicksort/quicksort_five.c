@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   quicksort_five.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: npalissi <npalissi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 13:24:24 by npalissi          #+#    #+#             */
-/*   Updated: 2024/12/10 16:57:01 by npalissi         ###   ########.fr       */
+/*   Updated: 2024/12/11 14:05:28 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,27 +24,27 @@ void	ft_min_to_top(t_data *data)
 	while (data->stack_a != min)
 	{
 		if (rotate)
-			ra(data);
+			ra(data, 1);
 		else
-			rra(data);
+			rra(data, 1);
 	}
 }
 
 void	ft_quicksort_four(t_data *data)
 {
 	ft_min_to_top(data);
-	pb(data);
+	pb(data, 1);
 	ft_quicksort(data);
-	pa(data);
+	pa(data, 1);
 }
 
 void	ft_quisort_five(t_data *data)
 {
 	ft_min_to_top(data);
-	pb(data);
+	pb(data, 1);
 	ft_min_to_top(data);
-	pb(data);
+	pb(data, 1);
 	ft_quicksort(data);
-	pa(data);
-	pa(data);
+	pa(data, 1);
+	pa(data, 1);
 }

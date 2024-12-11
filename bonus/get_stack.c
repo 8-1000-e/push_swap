@@ -6,11 +6,11 @@
 /*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 22:12:24 by edubois-          #+#    #+#             */
-/*   Updated: 2024/12/11 16:29:56 by npalissi         ###   ########.fr       */
+/*   Updated: 2024/12/11 16:40:16 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "checker.h"
 
 int	ft_lennb(char *s)
 {
@@ -41,7 +41,7 @@ int	get_stack(char *str, t_list **stack)
 
 	nb = 0;
 	if (!str || ft_strlen(str) == 0)
-		clean_exit(*stack, 1);
+		clean_exit_bonus(*stack, 2);
 	while (str && *str)
 	{
 		overflow = 0;
@@ -49,7 +49,7 @@ int	get_stack(char *str, t_list **stack)
 			str++;
 		nb = ft_atoi(str, &overflow);
 		if (overflow)
-			clean_exit(*stack, 1);
+			clean_exit_bonus(*stack, 2);
 		ft_lstadd_back(stack, ft_lstnew(nb));
 		str += ft_lennb(str);
 		while (*str && (ft_iswhitespace(*str) || delete_zero(str)))

@@ -6,7 +6,7 @@
 /*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 20:58:32 by edubois-          #+#    #+#             */
-/*   Updated: 2024/12/10 19:58:25 by npalissi         ###   ########.fr       */
+/*   Updated: 2024/12/11 14:49:36 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ void	clean_exit(t_list *a, int error)
 		ft_clearlst(a);
 	if (error)
 		ft_printf(2, "Error \n");
-	exit(0);
+	exit(error != 0);
 }

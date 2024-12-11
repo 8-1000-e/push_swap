@@ -1,44 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_function_b.c                                    :+:      :+:    :+:   */
+/*   ft_function_a.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 18:33:06 by npalissi          #+#    #+#             */
-/*   Updated: 2024/12/10 18:19:31 by npalissi         ###   ########.fr       */
+/*   Created: 2024/11/12 02:40:19 by npalissi          #+#    #+#             */
+/*   Updated: 2024/12/11 12:31:52 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../push_swap.h"
 
-int	sb(t_data *data)
+int	sa(t_data *data, int send_message)
 {
-	if (!sba(&data->stack_b))
+	if (!sba(&data->stack_a))
 		return (0);
-	write(1, "sb\n", 3);
+	if (send_message)
+		write(1, "sa\n", 3);
 	return (1);
 }
 
-int	rb(t_data *data)
+int	ra(t_data *data, int send_message)
 {
-	if (!rba(&data->stack_b))
+	if (!rba(&data->stack_a))
 		return (0);
-	write(1, "rb\n", 3);
+	if (send_message)
+		write(1, "ra\n", 3);
 	return (1);
 }
 
-int	rrb(t_data *data)
+int	rra(t_data *data, int send_message)
 {
-	if (!rrba(&data->stack_b))
+	if (!rrba(&data->stack_a))
 		return (0);
-	write(1, "rrb\n", 4);
+	if (send_message)
+		write(1, "rra\n", 4);
 	return (1);
 }
 
-int	pb(t_data *data)
+int	pa(t_data *data, int send_message)
 {
-	pba(&data->stack_a, &data->stack_b);
-	write(1, "pb\n", 3);
+	pba(&data->stack_b, &data->stack_a);
+	if (send_message)
+		write(1, "pa\n", 3);
 	return (1);
 }

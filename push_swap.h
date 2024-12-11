@@ -6,7 +6,7 @@
 /*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 19:01:51 by edubois-          #+#    #+#             */
-/*   Updated: 2024/12/10 19:07:48 by npalissi         ###   ########.fr       */
+/*   Updated: 2024/12/11 16:45:13 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,27 +35,27 @@ typedef struct s_op
 	int	rr;
 }	t_op;
 
-int	get_stack(char *str, t_list **stack);
+int		get_stack(char *str, t_list **stack);
 void	clean_exit(t_list *a, int error);
 void	ft_clearlst(t_list *a);
 void	check_args(int ac, char **av);
 void	check_for_dups(t_list *lst);
 void	start_sort(t_list *lst);
-int		sa(t_data *data);
-int		ra(t_data *data);
-int		rra(t_data *data);
-int		pa(t_data *data);
-int		sb(t_data *data);
-int		rb(t_data *data);
-int		rrb(t_data *data);
-int		pb(t_data *data);
+int		sa(t_data *data, int send_message);
+int		ra(t_data *data, int send_message);
+int		rra(t_data *data, int send_message);
+int		pa(t_data *data, int send_message);
+int		sb(t_data *data, int send_message);
+int		rb(t_data *data, int send_message);
+int		rrb(t_data *data, int send_message);
+int		pb(t_data *data, int send_message);
 int		rba(t_list **stack);
 int		sba(t_list **stack);
 int		rrba(t_list **stack);
 int		pba(t_list **stack_1, t_list **stack_2);
-void	ss(t_data *data);
-void	rr(t_data *data);
-void	rrr(t_data *data);
+void	ss(t_data *data, int send_message);
+void	rr(t_data *data, int send_message);
+void	rrr(t_data *data, int send_message);
 
 void	ft_turkish_sort(t_data *data);
 void	print_lst(t_list *a);

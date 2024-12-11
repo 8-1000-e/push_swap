@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_turkish.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: npalissi <npalissi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: npalissi <npalissi@student.42angouleme.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 18:45:20 by npalissi          #+#    #+#             */
-/*   Updated: 2024/12/10 16:55:11 by npalissi         ###   ########.fr       */
+/*   Updated: 2024/12/11 16:30:31 by npalissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,9 @@ void	ft_pushb(t_data *data)
 	while (data->stack_a != min_node)
 	{
 		if (size)
-			rra(data);
+			rra(data, 1);
 		else
-			ra(data);
+			ra(data, 1);
 	}
 }
 
@@ -58,8 +58,8 @@ void	ft_turkish_sort(t_data *data)
 	t_op	tmp_op;
 	int		min_ops;
 
-	pb(data);
-	pb(data);
+	pb(data, 1);
+	pb(data, 1);
 	while (ft_lstsize(data->stack_a) > 1)
 	{
 		tmp = data->stack_a;
